@@ -1,11 +1,10 @@
-<!-- Example structure for each detailed page (e.g., howto2.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Tie a Tie</title>
+    <title>How to Tie a Shoelace</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -17,11 +16,29 @@
         h1 {
             color: #333;
         }
-        img {
+        .image-container {
+            position: relative;
+            display: inline-block;
             margin: 10px;
+        }
+        .label {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        img {
             border: 2px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: auto;
         }
         a {
             display: inline-block;
@@ -37,14 +54,27 @@
         a:hover {
             background-color: #0056b3;
         }
+        .iframe-container {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
-    <h1>How to Tie a Tie</h1>
+    <h1>How to boil a egg</h1>
     <p>Compare the two images below:</p>
-    <img src="images/llm-egg.png" alt="Tie Step 1" width="300">
-    <img src="images/egg.png" alt="Tie Step 2" width="300">
-    <br><br>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezaxPuh5aCdjRIp2FBPPc2onrGOIKLTMnbhOCIeuOfvCVr8Q/viewform?embedded=true" width="640" height="2612" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <div class="image-container">
+        <div class="label">Image A</div>
+        <img src="images/llm-egg.png" alt="Tie Step 1">
+    </div>
+    
+    <div class="image-container">
+        <div class="label">Image B</div>
+        <img src="images/egg.png" alt="Tie Step 2">
+    </div>
+
+    <div class="iframe-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezaxPuh5aCdjRIp2FBPPc2onrGOIKLTMnbhOCIeuOfvCVr8Q/viewform?embedded=true" width="640" height="2612" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
 </body>
 </html>
